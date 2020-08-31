@@ -1,0 +1,159 @@
+
+<style>
+#filter_search{
+    border: none;
+    margin-top:5px;
+    margin-bottom:5px;
+} 
+</style>
+<form class="row" style='font-size:12px;'>
+        <div class="col-lg-3">
+          <select class='form-control form-control-sm' name='category' id='itemId'>
+                <option value='Null'>Sort By</option>
+                <option value='F993ED0'>Model</option>
+                <option value='F993ED0'>Price</option>
+                <option value='F993ED0'>Make</option>
+            </select>     
+        </div>
+        
+        <div class="form-inline col-lg-5" id="searchSolution">
+            <input class="form-control  form-control-sm mr-sm-2 col-lg-9" type="search" placeholder="Search" aria-label="Search">
+            <span class="btn btn-outline-success my-2 my-sm-0 float-right btn-sm col-2" >Search</span>
+        </div>
+        <div class="form-inline col-lg-3">
+                <button class="btn btn-light btn-sm" type="button" data-toggle="collapse" data-target="#filterSearch" aria-expanded="false" aria-controls="filterSearch">Filter search</button> 
+        </div>
+   
+    <br>
+    <!-- table -->
+    <!-- search items  -->
+    <div class="col col-lg-12 row" id="filter_search">
+        <div class="collapse multi-collapse" id="filterSearch">
+            <div class="header mb-2">Filter Search</div>
+                <div class="row">
+                    <div class="col-lg-5 row">
+                        <div class="make col-lg-6">
+                            <label for="make">Make</label>
+                                <select class='form-control form-control-sm' name='category' id='itemId'>
+                                    <option value='Null'>Device Make</option>
+                                    <option value='all'>All</option>
+                                    <option value='hp'>HP</option>
+                                    <option value='samsung'>Samsung</option>
+                                    <option value='dell'>Dell</option>
+                                </select> 
+                        </div>
+                    <!-- ende:{make} start -->
+                
+                            <div class="type col-lg-6">
+                                    <label for="deviceType">Device Type</label>
+                                    <select class='form-control form-control-sm' name='category' id='itemId'>
+                                        <option value='Null'>Device Type</option>
+                                        <option value='hp'>Laptop</option>
+                                        <option value='samsung'>Desktop</option>
+                                        <option value='dell'>Printer</option>
+                                    </select> 
+                            </div>
+                        </div>
+                        <!-- end : {type} start -->
+
+                    <div class="col-lg-7 row">
+                        <div class="col-lg-5">
+                            <label for='mentaince cover'>Lease Status</label><br>
+                            <div class='btn-group btn-group-toggle' data-toggle='buttons'>
+                                <label class='btn btn-secondary btn-sm active'>
+                                    <input type='radio' name='lease' value='forbidden' id='forbidden' autocomplete='off' checked> Forbidden
+                                </label>
+                                <label class='btn btn-secondary btn-sm'>
+                                    <input type='radio' name='lease' value='allowed' id='allowed' autocomplete='off'> Allowed
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7 row">
+                            <div class="col-lg-6">
+                                <label for='min'>Min</label>
+                                <input type='text' class='form-control form-control-sm' id='min' name="min" placeholder="Min">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for='max'>Max</label>
+                                <input type='text' class='form-control form-control-sm' id='max' name="max" placeholder="Max">
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end -->
+            <br>
+            <!-- new -->
+            <div class="row">
+                    <div class="col-lg-5 row">
+                        <div class="make col-lg-6">
+                            <label for="make">Colour</label>
+                                <select class='form-control form-control-sm' name='color' id='itemId'>
+                                    <option value='Null'>Select Color</option>
+                                    <option value='all'>All</option>
+                                    <option value='yellow'>Yellow</option>
+                                    <option value='blue'>Blue</option>
+                                    <option value='green'>Green</option>
+                                </select> 
+                        </div>
+                    <!-- ende:{make} start -->
+                            <div class="type col-lg-6">
+                                    <label for="deviceType">Supplier</label>
+                                    <select class='form-control form-control-sm' name='Supplier' id='supplier'>
+                                        <option value='Null'>Select Supplier</option>
+                                        <option value='hp'>Name One</option>
+                                        <option value='samsung'>Name Two</option>
+                                        <option value='dell'>Name Three</option>
+                                    </select> 
+                            </div>
+                        </div>
+                        <!-- end : {type} start -->
+
+                    <div class="col-lg-7 row">
+                        <div class="col-lg-6">
+                            <label for='mentaince cover'>Warranty</label><br>
+                            <div class='btn-group btn-group-toggle' data-toggle='buttons'>
+                                <label class='btn btn-secondary btn-sm active'>
+                                    <input type='radio' name='lease' value='warranty' id='warranty' autocomplete='off' checked> Warranty
+                                </label>
+                                <label class='btn btn-secondary btn-sm'>
+                                    <input type='radio' name='lease' value='allowed' id='allowed' autocomplete='off'> No Warranty
+                                </label>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+     </form>
+    <!-- end search -->
+    <form class=" row col-lg-12">
+        <table class="table table-striped table-bordered table-hover" id="report">
+            <thead>
+                <tr style="font-size:12px;">
+                    <th scope="col" id="serialNo">Serial No</th>
+                    <th scope="col" id="name">Part Number</th>
+                    <th scope="col" id="make">Make</th>
+                    <th scope="col" id="model">Model</th>
+                    <th scope="col" id="location">Location</th>
+                    <th scope="col" id="color">color</th> 
+                    <th scope="col" id="leasedto">Assigned To</th> 
+                    <th scope="col" id="Purchased">Purchased</th>
+                    <th scope="col" id="condition">Condition</th>
+                    <th scope="col" id="l_status">Lease Status</th>
+                    <th scope="col" id="value">Value</th>
+                    <th scope="col" id="Warranty">Warranty</th>
+                </tr>
+            </thead>
+            <tbody id="reportBody" >
+            </tbody>
+        </table>
+    </form>
+    
+    
+    
+    
+    
+    

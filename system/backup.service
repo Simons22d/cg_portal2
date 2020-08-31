@@ -1,0 +1,11 @@
+[Unit]
+Description=Cargen Automatic backup Service
+After=network.target
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=denis
+ExecStart=/bin/bash   /home/dev/support/backup.sh
+[Install]
+WantedBy=multi-user.target

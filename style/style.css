@@ -1,0 +1,288 @@
+@font-face {
+    font-family: Muli;
+    font-weight: normal;
+    src: url("./muli/Muli.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Muli-bold;
+    font-weight: bold;
+    src: url("./muli/Muli-Bold.ttf") format("truetype");
+}
+
+
+
+@font-face {
+    font-family: Sarabun;
+    font-weight: normal;
+    src: url("./Sarabun/Sarabun-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-weight: normal;
+    src: url("./Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+/* @font-face {
+    font-family: Muli;
+    font-weight: bold;
+    src: url("./muli/Muli-Bold.ttf") format("truetype");
+} */
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+.offset-by-150{
+	margin-top: 100px;
+}
+.center{
+    margin : 0 auto;
+}
+html {
+    height: 100%;
+    font-family:"Muli"
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.body {
+    height: 100%;
+}
+
+.navbar{
+    height:80px;
+    box-shadow: 0px -10px 34px 6px rgba(189, 189, 189, 1);
+}
+
+html {
+    height: 100%;
+    font-family: "Muli";
+}
+
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+#container {
+    height: 100%;
+}
+
+#sidebar {
+    padding : 30px 10px 0px 5px;
+    display: inline-block;
+    font-family: 'Muli', sans-serif;
+    height: 100%;
+    width: 18%;
+    overflow: auto;
+}
+
+#content {
+    background-color:#fcfcfc;
+    display:inline-block;
+    height: 100%;
+    padding-left: 30px;
+    width: 82%;
+    overflow: auto;
+}
+.name {
+    text-align : center;
+}
+
+
+    /* new style */
+/*div { margin: 20px; }*/
+
+.styled-select {
+/*height: 29px;*/
+overflow: hidden;
+width: 240px;
+}
+
+.styled-select select {
+background: transparent;
+border: none;
+font-size: 12px;
+padding: 5px; /* If you add too much padding here, the options won't show in IE */
+width: 268px;
+}
+
+.styled-select.slate {
+background: url(../dist/css/arrow.png) no-repeat right center;
+width: 100px;
+}
+
+.styled-select.slate select {
+font-size: 14px;
+height: 34px;
+width: 114px;
+
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+outline: none;
+}
+/*styling the drops position*/
+.slate {
+    margin-left:15px;
+}
+.sidebar_items{
+    margin-left : 20px;
+}
+/*styling the bottom sidebar item for logout*/
+.bar_name{
+font-size:16px;
+color:#999;
+}
+.logout_sidebar{
+padding-left:-7px;
+}
+.log_sub{
+font-size:12px;
+}
+.log_main{
+color :#bababa;
+}
+#space{
+margin-top : 20px;
+}
+/*styling the icons : sidebar*/
+.icon{
+margin-top:-1px;
+padding-right : 15px;
+height : 17px
+}
+/*styling the sidebar items and buttons*/
+.item{
+cursor :pointer;
+}
+/* .item:hover{
+color:#6970ff;
+} */
+/*or the add icon*/
+.plus{
+height : 10px;
+}
+option:hover{
+color:#6970ff;
+}
+
+#theDisplay{
+font-family:"Muli";
+font-weight:600;
+color:#686970;
+}
+
+#this_form {
+    font-size : 14px;
+}
+#days{
+    color: #696969;
+}
+#logo{
+    height : 60px;
+    padding : 0px 0px 0px 20px;
+    margin : 0px 0px 40px 0px;
+}
+
+.nochild{
+    color : #232323;
+}
+.option{
+    font-size: 14px;
+}
+#location{
+    color:#bbb;
+    font-size :14px;
+}
+#location > a {
+    color : rgb(109, 193, 221);
+}
+.option:hover{
+    cursor  : pointer;
+}
+
+.summary{
+    padding-top : 20px;
+}
+
+#display{
+    font-size : 12px;
+    font-family: "Muli"  
+}
+.card{
+    font-family: "Muli"
+}
+#section{
+    font-family : "Muli"
+}
+
+.attachment{
+    padding-top:10px;
+}
+.attachment_count{
+    margin-bottom:20px
+}
+#graphs{
+    border:4px solid #ededed;
+    border-radius:20px ; 
+    padding :15px;
+    height : 300px;
+}
+#graphs:hover{
+    border:4px solid #e7e7c7;
+}
+#loggedEmail{
+    height: 32px;
+    border-radius : 5px;
+    border:3px solid #dedede;
+    font-size:12px;
+}
+#loggedEmail:hover{
+    background-color: #dedede;
+    color:#444;
+}
+
+.centeredButton{
+    text-align : center;
+    color : #f00;
+
+}
+.badge {
+    padding-top : 4px;
+    padding-bottom: 5px;
+}
+.form-signin{
+    margin-top:10px;
+    margin-left:-20px;
+}
+.asset_header{
+    color: grey;
+    font-size:18px;
+}
+.asset_creds{
+    color:grey;
+    font-size:14px;
+    padding: 5px 10px;
+    border:3px solid #dedede;
+    border-radius:5px;
+} 
+.link{
+    font-family: "Muli";
+}
+
+.cards{
+    color:#696969;
+    border: 3px solid grey;
+    padding-top:6px;
+    border-radius: 10px;
+    font-family: Muli-bold;
+    font-weight: 900;
+}

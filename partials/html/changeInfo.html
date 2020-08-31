@@ -1,0 +1,73 @@
+<style>
+        .infoHeads{
+            color: #999;
+            font-weight : bold;
+        }
+        .infoSpace {
+            margin-top:7px;
+        }
+        .text-muted{
+            color : #aaa;
+        }
+        .help_info{
+            margin-bottom : 7px;
+        }
+        .desc{
+            margin-left:-30px;
+        }
+    
+    </style>
+    
+    <div class="row col-lg-12 desc">
+        <div class="col-lg-7">
+            <br>
+            <div id="issueInfo">
+                <div class="infoSpace row"><div class="infoHeads col-lg-2">Title</div><div class="col-lg-1">:</div><div id="title"  class="col-lg-8"></div></div>
+                <div class="infoSpace row"><div class="infoHeads col-lg-2">Category</div><div class="col-lg-1">:</div><div id="department"  class="col-lg-8"></div></div>
+                <div class="infoSpace row"><div class="infoHeads col-lg-2">Date</div><div class="col-lg-1">:</div><div id="date"  class="col-lg-8"></div></div>
+                <div class="infoSpace row"><div class="infoHeads col-lg-2">Approved</div><div class="col-lg-1">:</div><div id="approved"  class="col-lg-8"></div></div>
+                <div class="infoSpace row"><div class="infoHeads col-lg-2">Requestor</div><div class="col-lg-1">:</div><div id="requestor"  class="col-lg-8"></div></div>
+            </div>
+            <br>
+            <div class="infoSpace row"><div class="infoHeads col-lg-3">Request Details</div></div>
+            <div class="infoSpace" id="description"><div class="col-lg-10"></div></div>
+    
+        </div>
+        <div class="col-lg-5">
+            <form id="issueHandle">
+                <div class='card'>
+                <div class='card-body'>
+                    <h5 class='card-title'>Manage Change</h5>
+                    <h6 class='card-subtitle mb-2 text-muted'>Take Actions Towards The Proposed Change.</h6>
+                    <p></p>
+                    <div class="form-group">
+                            <label for="employee">Assign Task To :</label>
+                            <select class="form-control form-control-sm" id="employee" name="employee">
+                              <option selected value="null">Select User</option>
+                            </select>
+                    </div>
+                    <p></p>
+                    <br>
+                    <div class="">
+                        <a href='#' class='btn btn-sm btn-success col-lg-4' id ='assignIssue' name="assign">Authorize</a>
+                        <a href='#' class='btn btn-sm btn-danger col-lg-4' id ='cancel' name="cancel">Reject</a>
+                    </div>
+
+                </div>
+
+               </div>
+                <br>
+                        <div class="col-lg-6" style="margin-left:-15px">
+                            <p class="text-muted">Attachments</p>
+                            <div id="change_attachments">
+                            <br>
+                        </div>
+                            <p class="text-muted">Workflow Attachments</p>
+                            <div id="workflow_attachments">
+                                
+                            </div>
+                    </div>
+            </form>
+            <br>
+        </div>
+    </div>

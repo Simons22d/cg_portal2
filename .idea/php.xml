@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/mail-capture/vendor/php-imap/php-imap" />
+      <path value="$PROJECT_DIR$/mail-capture/vendor/composer" />
+      <path value="$PROJECT_DIR$/mail-capture/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/mail-capture/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/mail-capture/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/mail-capture/vendor/paragonie/random_compat" />
+    </include_path>
+  </component>
+</project>

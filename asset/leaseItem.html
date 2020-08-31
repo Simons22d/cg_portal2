@@ -1,0 +1,191 @@
+<script>
+    if (sessionStorage.getItem('updateData')) {
+        let data = JSON.parse(sessionStorage.getItem('updateData'))[0];
+        console.log(data);
+
+        $("#itemName").attr("value", data.name);
+        $("#price").attr("value", data.price);
+        $("#color").attr("value", data.color);
+        $("#engineSize").attr("value", data.engine_size);
+        $("#make").attr("value", data.make);
+        $("#origin").attr("value", data.origin);
+        $("#year").attr("value", data.year);
+        $("#fuelCapacity").attr("value", data.fuel_capacity);
+        $("#units").attr("value", data.units);
+    }
+
+    function updateItems(){
+        let formData = $("#addItem").serialize();
+        items = formData.split("&");
+        // changing the bool types to be of type int
+        let id = JSON.parse(sessionStorage.getItem('updateData'))[0].id;
+        // function boolInt(index) { return int(items[index].split("=")[1]); }
+        // let state = items[4].split("=")[1] !== null ? int(items[4].split("=")[1]) : null;
+        // the user has select a branch
+        $.ajax({
+            url: "../partials/proc.php",
+            method: "POST",
+            data: {
+                updateItem: {
+                    "itemName": items[0].split("=")[1],
+                    "price": items[1].split("=")[1],
+                    "color": items[2].split("=")[1],
+                    "engineSize": items[3].split("=")[1],
+                    "state": items[4].split("=")[1], //bool [4]
+                    "cover": items[5].split("=")[1], //bool [5]
+                    "lease": items[6].split("=")[1], //bool [5]
+                    "make": items[7].split("=")[1],
+                    "origin": items[8].split("=")[1],
+                    "year": items[9].split("=")[1],
+                    "fuelType": items[10].split("=")[1], // bool [9]
+                    "fuelCapacity": items[11].split("=")[1],
+                    "units": items[12].split("=")[1],
+                    "id": id ,
+                }
+            },
+            success: function (result) {
+                // let data = JSON.parse(result);
+                console.log(result);
+                if (data.status === 201) {
+                    // item copied
+                    Swal.fire({
+                        type: 'success',
+                        title: 'copied successFully',
+                        text: 'Copied the Item Successfully',
+                        timer: 2000
+                    });
+                    $('form#addItem').trigger("reset");
+                }
+                if (data.status === 409) {
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Item Could Not Be Copied!',
+                        text: 'Item !',
+                        timer: 8000
+                    });
+                }
+            }
+        });
+    }
+</script>
+<form id='addItem'>
+            <div class='row container-fluid'>
+        <div class='col-lg-5'>
+            <div class='form-group'>
+                    <label for='itemName'>Item Name</label>
+
+            <input type='text' class='form-control' value='' name = 'itemName' id='itemName' placeholder='Enter Item Name'>
+                </div>
+
+            <div class='form-group'>
+            <label for='price'>Price</label>
+            <div class='input-group'>
+                <input type='text' name='price' class='form-control'  value='' id='price' placeholder=''>
+            </div>
+            </div>
+
+            <div class='form-group'>
+            <label for='color'>Color</label>
+            <input type='email' class='form-control' name='color' value='' id='color' placeholder='Enter Item color'>
+            </div>
+
+
+            <div class='form-group'>
+            <label for='engineSize'>Engine Size</label>
+            <div class='input-group'>
+                <div class='input-group-prepend'>
+                <div class='input-group-text'>Litres</div>
+                </div>
+                <input type='text' name='engineSize' class='form-control' value='' id='engineSize' placeholder='eg. 1.4'>
+            </div>
+            </div>
+
+            <div class='form-group'>
+            <label for='state'>State</label><br>
+            <div class='btn-group btn-group-toggle' data-toggle='buttons'>
+                <label class='btn btn-warning active'>
+                    <input type='radio' name='state' value='new' id='new' autocomplete='off' checked> New
+                </label>
+                <label class='btn btn-warning'>
+                    <input type='radio' name='state' value='refubrished' id='refubrished' autocomplete='off'> Refubrished
+                </label>
+                </div>
+                </div>
+
+                <div class='form-group'>
+                    <label for='mentaince cover'>Mentainance Cover</label><br>
+                        <div class='btn-group btn-group-toggle' data-toggle='buttons'>
+                        <label class='btn btn-warning active'>
+                            <input type='radio' name='cover' value='covered' id='covered' autocomplete='off' checked> Covered
+                        </label>
+                        <label class='btn btn-warning'>
+                            <input type='radio' name='cover' value='not covered' id='notCovered' autocomplete='off'> Not Covered
+                </label>
+                </div>
+            </div>
+
+                <div class='form-group'>
+                    <label for='mentaince cover'>Lease Status</label><br>
+                        <div class='btn-group btn-group-toggle' data-toggle='buttons'>
+                        <label class='btn btn-secondary active'>
+                            <input type='radio' name='lease' value='forbidden' id='forbidden' autocomplete='off' checked> Forbidden
+                        </label>
+                        <label class='btn btn-secondary'>
+                            <input type='radio' name='lease' value='allowed' id='allowed' autocomplete='off' > Allowed
+                </label>
+                </div>
+                </div>
+
+        </div>
+
+        <!--page division-->
+        <div class='col-lg-6'>
+            <div class='form-group'>
+            <label for='make'>Make</label>
+            <input type='text' class='form-control' name='make' id='make' value='' placeholder='Make eg . Toyota ,Yamaha ,Honda'>
+                </div>
+
+            <div class='form-group'>
+            <label for='origin'>Country Of Origin</label>
+            <input type='text' class='form-control' name='origin'  value='' id='origin' placeholder='Origin'>
+                </div>
+
+            <div class='form-group'>
+            <label for='year'>Year</label>
+            <input type='email' class='form-control' value='' name='year' id='year' placeholder='Enter Item Year'>
+            </div>
+
+
+            <div class='form-group'>
+            <label for='fueltype'>Fuel Type</label><br>
+            <div class='btn-group btn-group-toggle' data-toggle='buttons'>
+                <label class='btn btn-warning active'>
+                    <input type='radio' name='fuelType' value='pertol' id='pertol' autocomplete='off' checked> Petrol
+                </label>
+                <label class='btn btn-warning'>
+                    <input type='radio' name='fuelType' value='diesel' id='diesel' autocomplete='off'> Diesel
+                </label>
+                <label class='btn btn-warning'>
+                    <input type='radio' name='fuelType' value='electric' id='electric' autocomplete='off'> Electric
+                </label>
+                </div>
+            </div>
+
+            <div class='form-group'>
+            <label for='fuelCapacity'>Tank Capacity</label>
+            <div class='input-group'>
+                <div class='input-group-prepend'>
+                <div class='input-group-text'>Litres</div>
+                </div>
+                <input type='text' name='fuelCapacity' class='form-control' id='fuelCapacity' value='' placeholder='eg. 20'>
+            </div>
+            </div>
+                <div class='form-group'>
+            <label for='units'>Units</label>
+            <input type='email' class='form-control' name='units' id='units' value='' placeholder='Enter Engine Capacity'>
+                </div>
+
+            <br><br><br><br><br><button type='button' id='subber' onclick='updateItems()' class='offset-8 col-lg-4 btn btn-primary btn-block'>Submit</button>
+            </div>
+        </div>
+    </form>

@@ -1,0 +1,133 @@
+<!--<form id='addItem' class="mb-5">-->
+<div class='row'>
+    <div class='col-lg-6'>
+        <div class='form-group'>
+            <label for='name'>Name</label>
+            <input type='text' class='form-control form-control-sm' name = 'name' id='name' placeholder='Enter Item Name'>
+        </div>
+
+        <div class='form-group'>
+            <label for='price'>Price</label>
+            <div class='input-group'>
+                <input type='text' name='price' class='form-control form-control-sm' id='price' placeholder=''>
+            </div>
+        </div>
+
+        <div class='form-group'>
+            <label for='color'>Color</label>
+            <input type='email' class='form-control form-control-sm' name='color' id='color' placeholder='Enter Item color'>
+        </div>
+
+        <div class='form-group'>
+            <label for='warrantyExpires'>Warranty Expiry Date</label>
+            <input type='text' class='form-control form-control-sm' name='warrantyExpires' id='warrantyExpires' placeholder='' readonly>
+        </div>
+
+        <div class='form-group'>
+            <label for='manufacturer'>Manufacturer</label>
+            <div class='input-group'>
+                <input type='text' name='manufacturer' class='form-control form-control-sm' id='manufacturer' placeholder='eg. Sony Samsung'>
+            </div>
+        </div>
+
+        <div class='form-group'>
+            <label for='lease'>Lease Status</label><br>
+            <div class='btn-group btn-group-toggle' data-toggle='buttons' id="lease">
+                <label class='btn btn-sm btn-secondary active'>
+                    <input type='radio' name='lease' value='forbidden' id='forbidden' autocomplete='off' checked> Forbidden
+                </label>
+                <label class='btn btn-sm btn-secondary'>
+                    <input type='radio' name='lease' value='allowed' id='allowed' autocomplete='off'> Allowed
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!--page division-->
+    <div class='col-lg-6'>
+        <!--      start-->
+        <div class='form-group'>
+            <label for='location'>Location</label>
+            <select class='form-control form-control-sm' name='location' id='location'>
+                <option value='Null'>Select Location</option>
+            </select>
+        </div>
+        <!--      end-->
+        <div class='form-group'>
+            <label for='category'>Category</label>
+            <select class='form-control form-control-sm' name='category' id='category'>
+                <option value='Null'>Select Category</option>
+            </select>
+        </div>
+
+        <!-- category section for specs -->
+        <div class='form-group'>
+            <label for='Model'>Model</label>
+            <input type='text' class='form-control form-control-sm' name='Model' id='model' placeHolder="HP G250">
+        </div>
+
+        <div class='form-group'>
+            <label for='dop'>Date Of Purchase</label>
+            <input type='text' class='form-control form-control-sm' name='dop' id='dop' placeholder='' readonly>
+        </div>
+
+
+        <div class='form-group'>
+            <label for='supplier'>Supplier</label>
+            <input type='email' class='form-control form-control-sm' name='supplier' id='supplier' placeholder='Enter Item supplier'>
+        </div>
+
+        <div class='form-group'>
+            <label for='serialnumber'>Serial Number</label>
+            <div class='input-group'>
+                <input type='text' name='serialnumber' class='form-control form-control-sm' id='serialnumber' placeholder=''>
+            </div>
+        </div>
+        <div class='form-group'>
+            <label for='warranty'>Warranty</label><br>
+            <div class='btn-group btn-group-toggle' data-toggle='buttons' id="warranty">
+                <label class='btn btn-sm btn-warning'>
+                    <input type='radio' name='warranty' value='nowarranty' id='nowarranty' autocomplete='off'> No Warranty
+                </label>
+                <label class='btn btn-sm btn-success'>
+                    <input type='radio' name='warranty' value='haswarranty' id='haswarranty' autocomplete='off'> Has Warranty
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- specs -->
+<h5 class='mt-3'>Specifications</h5>
+<p></p>
+<div class="row">
+    <div class='col-lg-6'>
+        <div class='form-group'>
+            <label for='memCapacity'>Memory Capacity</label>
+            <input type='text' class='form-control form-control-sm' name ='memCapacity' id='memCapacity' placeholder='4gb,8gb,16Gb ...'>
+        </div>
+
+        <div class='form-group'>
+            <label for='screensize'>Screen Size</label>
+            <input type='email' class='form-control form-control-sm' name='screensize' id='screensize' placeholder='15.6" 17" 20 " ...'>
+        </div>
+
+    </div>
+
+    <!--page division-->
+    <div class='col-lg-6'>
+        <!--      start-->
+        <div class='form-group'>
+            <label for='processor'>Processor</label>
+            <input type='email' class='form-control form-control-sm' name='processor' id='processor' placeholder='Core i3 i5 i7 i9 ...'>
+        </div>
+
+        <div class='form-group'>
+            <label for='diskCapacity'>Disk Capacity</label>
+            <input type='email' class='form-control form-control-sm' name='diskCapacity' id='diskCapacity' placeholder='250Gb,320Gb,500Gb ...'>
+        </div>
+
+    </div>
+    <button type='button' id='submitAddItem' class='col-lg-4 offset-lg-3 btn btn-primary btn-block mt-5'>Submit</button>
+</div>
+<!--</form>-->

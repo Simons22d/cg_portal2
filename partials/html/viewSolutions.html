@@ -1,0 +1,46 @@
+
+<form class="row">
+    <div class="col-lg-3">
+      <select class='form-control form-control-sm' name='category' id='itemId'>
+            <option value='Null'>Select Category</option>
+            <option value='F993ED0'>Hardware</option>
+            <option value='F993ED0'>Software</option>
+            <option value='F993ED0'>Printers</option>
+        </select>
+    </div>
+    <!-- <div class="col-lg-3">
+        <select class='form-control' name='category' id='itemId'>
+              <option value='Null'>Select Category</option>
+              <option value='F993ED0'>Hardware</option>
+              <option value='F993ED0'>Software</option>
+              <option value='F993ED0'>Printers</option>
+          </select>
+      </div> -->
+    <div class="form-inline col-lg-5" id="searchSolution">
+        <input class="form-control form-control-sm mr-sm-2 col-lg-9" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-sm btn-outline-success mt-2 my-sm-0 float-right" type="submit">Search</button>
+    </div>
+</form>
+<br>
+<!-- table -->
+<form class=" row col-lg-12">
+    <table class="table table-striped table-bordered table-hover" id="report">
+        <thead>
+        <tr>
+            <th scope="col" id="issueid">Issue ID</th>
+            <th scope="col" id="from">Requestor</th>
+            <th scope="col" id="subject">Subject</th>
+            <th scope="col" id="dateReceived">Date Recieved</th>
+            <th scope="col" id="solution">Solution</th>
+            <th scope="col" id="reason">Reason</th>
+        </tr>
+        </thead>
+        <tbody id="reportBody" >
+        </tbody>
+    </table>
+</form>
+
+
+
+
+

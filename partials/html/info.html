@@ -1,0 +1,87 @@
+<style>
+    .infoHeads{
+        color: #999;
+        font-weight : bold;
+    }
+    .infoSpace {
+        margin-top:7px;
+    }
+    .text-muted{
+        color : #aaa;
+    }
+    .help_info{
+        margin-bottom : 7px;
+    }
+    .desc{
+        margin-left:-30px;
+    }
+
+</style>
+
+<div class="row col-lg-12 desc">
+    <div class="col-lg-8">
+        <br>
+        <div id="issueInfo">
+            <div class="infoSpace row"><div class="infoHeads col-lg-2">Issue</div><div class="col-lg-1">:</div><div id="issue"  class="col-lg-8"></div></div>
+            <div class="infoSpace row"><div class="infoHeads col-lg-2">From</div><div class="col-lg-1">:</div><div id="from"  class="col-lg-8"></div></div>
+            <div class="infoSpace row"><div class="infoHeads col-lg-2">Issue Id</div><div class="col-lg-1">:</div><div id="issueId"  class="col-lg-8"></div></div>
+            <div class="infoSpace row"><div class="infoHeads col-lg-2">Date</div><div class="col-lg-1">:</div><div id="date"  class="col-lg-8"></div></div>
+        </div>
+        <br>
+        <div class="infoSpace row"><div class="infoHeads col-lg-3">Issue Details</div></div>
+        <div class="infoSpace" id="email_body"><div class="col-lg-10"></div></div>
+
+    </div>
+    <div class="col-lg-4">
+        <form id="issueHandle">
+            <div class='card'>
+            <div class='card-body'>
+                <h5 class='card-title'>Manage Issue</h5>
+                <h6 class='card-subtitle mb-2 text-muted'>Take Actions Towards The Issue.</h6>
+                <button class="btn btn-sm btn-outline-primary" id="countdown" disabled>20 Pending Tasks </button>
+                <p></p>
+                <div class="form-group">
+                        <label for="employee">Assign Task To :</label>
+                        <select class="form-control form-control-sm" id="employee" name="employee" onchange="getUserIssues(this);">
+                          <option selected value="null">Select User</option>
+                        </select>
+                </div>
+                <p></p>
+                <div class='form-group'>
+                    <label for='condition'>Set Priority<small  class="help_info form-text text-muted">Will Determine The Urgency Of Attendance.</small></label><br>
+                    <div class='btn-group btn-group-toggle' data-toggle='buttons'>
+                        <label class='btn btn-sm btn-danger active'>
+                        <input type='radio' name='priority' value='3' id='high' autocomplete='off' checked> High
+                        </label>
+                        <label class='btn btn-sm btn-warning'>
+                        <input type='radio' name='priority' value='2' id='medium' autocomplete='off'> Medium
+                        </label>
+                        <label class='btn btn-sm btn-success'>
+                        <input type='radio' name='priority' value='1' id='low' autocomplete='off'> Low
+                        </label>
+                    </div>
+                </div>
+                <!-- type -->
+                <div class="form-group">
+                        <label for="employees">Issue Type :<small  class="help_info form-text text-muted">Specify The Issue Category.</small></label>
+                        <select class="form-control form-control-sm" id="issueType"  name="issueType">
+                          <option value="null" selected>Select The Issue Category</option>
+                        </select>
+                </div>
+                <!-- end Type-->
+                <br>
+                <div class="offset-lg-5">
+                    <a href='#' class='card-link' id ='assignIssue' name="assign">Assign Issue</a>
+                    <a href='#' class='card-link' style="color:crimson;" id ='cancel' name="cancel">Cancel</a>
+                </div>
+            </div>
+           </div>
+           <br>
+           <div class="attachments" id="attachments">
+            
+               
+           </div>
+        </form>
+        <br>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+# Asset management
+1. code : lpt_000006 <- {should be six characters long}
+2. categories {laptops,Desktop,Priters,Servers ...}
+3. Details about an item : 
+_serial number : txt
+_Model : txt
+_Manufucturer : txt
+_Location : dropdown {endpoint}
+_staff alocated : search {txt} {later}
+_date of purchase : date picker 
+_supplier : Name {suggestion}
+_value : txt {auto}
+_warranty : switch
+_warranty expirly date  : txt
+_depreciation {currency in shillings} -- we should hv some sort of percentage decpreciation : {output}
+_status {active || !active } : {input}
+----
+_last Date of service : another form
+_next Date of service : another form
+_cost_of repair {after repair cost <-{assuming this will be the original cost - cost of repair and decpreciation}} : {Display}
+
+4. Reallocation {user_id,asset_id}
+5. asset Disposal form
+6. Repair history 
+7. Report Filters

@@ -1,0 +1,21 @@
+{
+  "name": "node_emailImap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "base64-stream": "^1.0.0",
+    "dotenv": "^8.0.0",
+    "imap": "^0.8.19",
+    "imap-simple": "^4.3.0",
+    "mailparser": "^2.7.1",
+    "mysql": "^2.17.1",
+    "promise-mysql": "^3.3.1",
+    "randomstring": "^1.1.5"
+  }
+}

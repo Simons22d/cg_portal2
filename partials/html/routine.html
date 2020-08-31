@@ -1,0 +1,57 @@
+<form id="addRoutine">
+    <div class="row">
+        <div class="col-lg-5">
+            <label for="Title">Title<small  class="help_info form-text text-muted">Routine/Task Title</small></label>
+            <input type="text" class="form-control form-control-sm" id="title" name="title">
+        </div>
+
+
+        <div class='form-group occurence'>
+            <label for='condition'>Set Occurence<small  class="help_info form-text text-muted">How Often It Will Occur</small></label><br>
+            <div class='btn-group btn-group-toggle' data-toggle='buttons' id="radio">
+                <label class='btn btn-sm btn-secondary active'  id='0' >
+                <input type='radio' name='condition' class='radio' autocomplete='off'> Range
+                </label>
+                <label class='btn btn-sm btn-secondary' id='1'>
+                <input type='radio' name='condition' class='radio'  autocomplete='off' checked> Once
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <label for="datePickerStart">Start Date<small  class="help_info form-text text-muted">The Date The Task Begins</small></label>
+            <input readonly type="text" class="form-control form-control-sm" id="startDate" name="datePackerOne">
+        </div>
+        <div class="col-lg-3" id="endDateDiv">
+            <label for="datePickerStart">End Date<small  class="help_info form-text text-muted">The Date The Task Ends</small></label>
+            <input readonly type="text" class="form-control form-control-sm" id="endDate" name="datePackerOne">
+        </div>
+    </div>
+    <br>
+    <div class="form-group occurence">
+        <label for="">Repeats</label><br>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn  btn-sm btn-outline-info active">
+                <input type="radio" name="options" id="daily" autocomplete="off" value="1"> Daily
+            </label>
+            <label class="btn btn-sm btn-outline-info">
+                <input type="radio" name="options" id="weekly" autocomplete="off" value="2" checked> Weekly
+            </label>
+            <label class="btn btn-sm btn-outline-info">
+                <input type="radio" name="options" id="monthly" autocomplete="off" value="3"> Monthly
+            </label>
+            <label class="btn btn-sm btn-outline-info">
+                <input type="radio" name="options" id="yearly" autocomplete="off" value="4"> Yearly
+            </label>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class='form-group col-lg-8'>
+        <label for='reason'>Description</label>
+        <textarea class='form-control form-control-sm' name='reason' id='reason' rows='2'></textarea>
+        </div>
+    </div>
+    <button class="btn btn-sm btn-primary offset-lg-3 col-lg-4" type="button" id="addRoutineSubmit">Create Routine</button>
+</form>

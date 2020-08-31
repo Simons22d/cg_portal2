@@ -1,0 +1,129 @@
+<form id='solutionForm' class="col-lg-11">
+    <h5>Provide The Solution and Issue to The Following Issue</h5>
+    <h6><u>Issue Details</u></h6>
+    <div class="infoSpace row"><div class="infoHeads col-lg-2">Issue</div><div class="col-lg-1">:</div><div id="issue"  class="col-lg-8"></div></div>
+    <div class="infoSpace row"><div class="infoHeads col-lg-2">From</div><div class="col-lg-1">:</div><div id="from"  class="col-lg-8"></div></div>
+    <div class="infoSpace row"><div class="infoHeads col-lg-2">Issue Id</div><div class="col-lg-1">:</div><div id="issueId"  class="col-lg-8"></div></div>
+    <div class="infoSpace row"><div class="infoHeads col-lg-2">Date Submitted</div><div class="col-lg-1">:</div><div id="date"  class="col-lg-8"></div></div>
+    <div class="infoSpace row"><div class="infoHeads col-lg-2">Date Assigned</div><div class="col-lg-1">:</div><div id="assigned"  class="col-lg-8"></div></div>
+  <!-- buttons -->
+  <br>
+    <div class='form-group'>
+      <label for='reason'>Diagnosis * </label>
+      <h6 class='card-subtitle mb-2 text-muted'>Please Provide Specific Issue.</h6>
+      <textarea class='form-control col-lg-9' name='reason' id='reason'   rows='3' required></textarea>
+    </div>
+  <div class='form-group'>
+    <label for='solution'>Solution * </label>
+    <h6 class='card-subtitle mb-2 text-muted'>Please The Specify Solution.</h6>
+    <textarea class='form-control col-lg-9' name='solution' id='sol' rows='5' required></textarea>
+  </div>
+
+  <div class='form-group'>
+    <label for='recommendation'>Recommendation * </label>
+    <h6 class='card-subtitle mb-2 text-muted'>Please The Specify Solution.</h6>
+    <textarea class='form-control col-lg-9' name='recommendation' id='recommendation' rows='4' required></textarea>
+  </div>
+  <!-- text input -->
+<p></p>
+  <button class="btn btn-primary offset-lg-5 col-lg-4" type="button" id="submitSolution">Submit Solution</button>
+<p></p>
+</form>
+<script>
+// custom ttext js
+// function bindEditor(domId){
+// 	CKEDITOR.editorConfig = function (config) {
+//     config.language = 'es';
+//     config.uiColor = '#F7B42C';
+//     config.height = 300;
+//     config.toolbarCanCollapse = true;
+
+// };
+// CKEDITOR.replace(domId);	
+// }
+
+// bindEditor("reason")
+// bindEditor("sol")
+// bindEditor("recommendation")
+
+	// var reason;
+	// var solution;
+	// var rec;
+
+	if(globalPageData){
+		$("#spinner").hide();
+	 //    listing for form submit
+		$("#submitSolution").on("click",(e)=>{
+			let issue = globalPageData.email_subject;
+			let from = globalPageData.email_from;
+			let ticket = globalPageData.ticket;
+			let date = globalPageData.dateAdded;
+			let issueId = globalPageData.id;
+			let assign = globalPageData.dateUpdated;
+
+			//adding to the DOM
+			$("#issue").html(issue);
+			$("#from").html(from);
+			$("#issueId").html(ticket).attr("id",ticket).attr("value",issueId);
+			$("#date").html(date);
+			$("#assigned").html(assign);
+			let thisReason = $("#reason").val();
+			let thisSolution = $("#sol").val();
+			let thisRec = $("#recommendation").val();
+			//    seralize this form
+			// //    the current logged in user
+			let thisUser = JSON.parse(sessionStorage.getItem("userLoggedIn"));
+			let resolvedId  = thisUser.id;
+			// //check if all the fields are empty
+			if(thisReason.length > 10 && thisSolution.length > 10 && thisRec.length > 10){
+				// some solution entered /
+				$.ajax({
+					url : process,
+					method : "POST",
+					data : {
+						category : "resolve_issue",
+						issue_id : issueId,
+						problem : thisReason,
+						solution : thisSolution,
+						recommendation : thisRec,
+						resolver : resolvedId
+					},
+					beforeSend : ()=>{
+						$("#spinner").show();
+					},
+					success : (data)=>{
+						Swal.fire({
+							type: 'success',
+							title: 'Success!',
+							text: 'Issue Resolved SuccessFully!',
+							timer: 5000
+						});
+						$("#pending").trigger("click");
+					},
+					error : (jqXHR,textStatus,errorThrown)=>{
+						console.log(jqXHR);
+						Swal.fire({
+							type: 'error',
+							title: 'Error!',
+							text: 'Issue Already Escalated!',
+							timer: 5000
+						});
+					},
+					complete : ()=>{
+						setTimeout(()=>{ $("#spinner").hide()} ,1000)
+					}
+				})
+			}else{
+				swal.fire({
+					type : "error",
+					title : "Data Error",
+					text : "Please make Sure That All Fields Are Properly Filled. They Should Have More Than Ten Characaters.",
+					timer : 50000,
+					allowOutsideClick : false
+				})
+			}
+		
+		});
+	}
+	
+</script>

@@ -1,0 +1,64 @@
+
+<h5 id="addUser">Modify User Details</h5>
+<form id="managerUser">
+    <div class="addDept">
+        
+    <p></p><p></p>
+    <!-- userid -->
+    <div class="form-group row">
+        <div class="col-lg-5">
+          <label for="firstname">Firstname</label>
+          <input type="text" id='firstname' class="form-control" name="firstname" placeholder='John'>
+          <small class="form-text text-muted"></small>
+        </div>
+
+        <div class="col-lg-5">
+          <label for="lastname">Lastname</label>
+          <input type="text" id='lastname' class="form-control" name="lastname" placeholder='Doe'>
+          <small class="form-text text-muted"></small>
+        </div>
+    </div>
+    <!-- password -->
+    <div class="form-group row">
+      <!-- email -->
+        <div class="col-lg-5">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="john.doe@cargen.com" class="form-control " disabled>
+        </div>
+        <!-- phone -->
+        <div class="col-lg-5">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" placeholder="0712345678" class="form-control">
+        </div>
+
+
+
+    </div>
+    <!-- password -->
+    <div class="form-group row">
+<!--       dept-->
+        <div class="col-lg-5">
+            <label for="phone">Password<small  class="help_info form-text text-muted">Change User Password.</small></label>
+            <input type="password" id="password" name="password" placeholder="*******" class="form-control">
+        </div>
+
+
+        <div class="form-group col-lg-5">
+            <label for='condition'>User Role
+                <small  class="help_info form-text text-muted">Will Determine The Kind Of Task The Use Can Perform.</small>
+            </label><br>
+            <div class='btn-group btn-group-toggle' data-toggle='buttons'>
+                <label class='btn btn-secondary active'>
+                    <input type='radio' name='userType' value='1' id='admin' autocomplete='off'> Admin
+                </label>
+                <label class='btn btn-secondary'>
+                    <input checked type='radio' name='userType' value='2' id='normal' autocomplete='off' > Normal
+                </label>
+            </div>
+        </div>
+
+    </div>
+<br>
+    <!-- buttons -->
+    <button class="btn btn-primary offset-lg-3 col-lg-4" type="button" id="addUserSubmit">Save User Details</button>
+</form>

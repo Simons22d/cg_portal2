@@ -1,0 +1,11 @@
+[Unit]
+Description=Cargen Mailer_Notify_Confirmation Service
+After=network.target
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=denis
+ExecStart=/bin/bash  /home/dev/support/mail.sh
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><div class="row col-lg-12">
+        <div class="col-lg-5" style="border:1px dashed blue; border-radius:5px; padding:10px ; background-color :#fefefe; height : 300px;">
+            <canvas id="doughnut" width="120" height="75"></canvas>
+            <script>
+                var ctx = document.getElementById('doughnut').getContext('2d');
+                var doughnut = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Pending", "completed"],
+                        datasets: [
+                            {
+                                label: "Population (millions)",
+                                backgroundColor: ["#fee345", "#210294"],
+                                data: [2478,5267]
+                            }
+                        ]
+                    },
+                    options: {
+                        title: {
+                            display: true,
+                            text: 'Summary Of Done And Pending Tasks'
+                        }
+                    }
+                });
+            </script>
+        </div>
+        <div class="col-lg-6 offset-lg-1" style="border:1px dashed blue; border-radius:5px ; padding :15px; background-color :#fefefe; height : 300px;">
+            <canvas id="myChart" width="110" height="65"></canvas>
+            <script>
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+                        datasets: [{
+                            steppedLine : "after",
+                            label:"Requests Serviced",
+                            data: [12, 19, 3, 5, 2,3,23,34,4,10,12,34,23,34,56],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        title: {
+                            display: true,
+                            text: 'Task Lists for The Last 15 Days'
+                        },
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </div>
+        <br>
+        <div class="row col-lg-12">
+            <div class="col-lg-12" style="border:1px dashed blue; border-radius:5px; padding :20px; background-color :#fefefe; height : 200px;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus cum reprehenderit expedita tempora totam esse sequi minus fugit voluptas corrupti.
+            </div>
+        </div></title>
+</head>
+<body>
+
+</body>
+</html>

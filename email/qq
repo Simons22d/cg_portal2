@@ -1,0 +1,15 @@
+● mail.service - Cargen Mailer_Notify_Confirmation Service
+   Loaded: loaded (/etc/systemd/system/mail.service; enabled; vendor preset: enabled)
+   Active: inactive (dead) since Thu 2019-08-08 12:59:33 EAT; 7s ago
+ Main PID: 27663 (code=killed, signal=TERM)
+
+Aug 08 12:58:50 support bash[27663]: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '917834' for key 'email_id'Thu 8 2019 12:58 50        —        Email Saved <james.mugo@cargen.com>
+Aug 08 12:58:56 support bash[27663]: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '918089' for key 'email_id'Thu 8 2019 12:58 56        —        Email Saved <martin.njau@cargen.com>
+Aug 08 12:59:03 support bash[27663]: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '921970' for key 'email_id'Thu 8 2019 12:59 03        —        Email Saved <sarah.amuga@cumminscargen.com>
+Aug 08 12:59:05 support bash[27663]: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '926089' for key 'email_id'Thu 8 2019 12:59 04        —        Email Saved <james.mugo@cargen.com>
+Aug 08 12:59:10 support bash[27663]: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '926131' for key 'email_id'Thu 8 2019 12:59 10        —        Email Saved <erick.ochieng@cargen.com>
+Aug 08 12:59:16 support bash[27663]: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '936803' for key 'email_id'Thu 8 2019 12:59 16        —        Email Saved <gloria.kiconco@cargen.com>
+Aug 08 12:59:22 support bash[27663]: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '938546' for key 'email_id'Thu 8 2019 12:59 22        —        Email Saved <gilbert.mutai@cargen.com>
+Aug 08 12:59:28 support bash[27663]: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '938733' for key 'email_id'Thu 8 2019 12:59 28        —        Email Saved <joel@cargen.com>
+Aug 08 12:59:33 support systemd[1]: Stopping Cargen Mailer_Notify_Confirmation Service...
+Aug 08 12:59:33 support systemd[1]: Stopped Cargen Mailer_Notify_Confirmation Service.

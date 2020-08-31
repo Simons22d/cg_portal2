@@ -1,0 +1,131 @@
+<style>
+    .infoHeads{
+        color: #999;
+        font-weight : bold;
+    }
+    .infoSpace {
+        margin-top:7px;
+    }
+    .text-muted{
+        color : #aaa;
+    }
+    .desc{
+        font-size : 14px;
+    }
+    #body{
+        margin-left : -16px;
+    }
+    .page{
+        margin-left:-16px;
+    }
+    /*.btn-light{*/
+    /*    border : 4px solid #eee;*/
+    /*    border-radius: 10px;*/
+    /*}*/
+    .terms{
+        color : #777;
+    }
+    .buttons{
+        margin-left:20px;
+    }
+</style>
+<div class="page">
+    <div class="row col-lg-12">
+        <div class="col-lg-8">
+            <h5>Issue Details</h5><br>
+            <button class="btn btn-sm btn-outline-primary" id="notOverDue" disabled><span id="duration"></span></button>
+            <button class="btn btn-sm btn-outline-danger" id="overDue" disabled>Task Overdue </button>
+            
+            <p><br></p>
+            <div id="issueInfo">
+            <div class="infoSpace row"><div class="infoHeads col-lg-3">Issue</div><div class="col-lg-1">:</div><div id="issue"  class="col-lg-8"></div></div>
+            <div class="infoSpace row"><div class="infoHeads col-lg-3">From</div><div class="col-lg-1">:</div><div id="from"  class="col-lg-8"></div></div>
+            <div class="infoSpace row"><div class="infoHeads col-lg-3">Issue Id</div><div class="col-lg-1">:</div><div id="issueId"  class="col-lg-8"></div></div>
+            <div class="infoSpace row"><div class="infoHeads col-lg-3">Date Submitted</div><div class="col-lg-1">:</div><div id="date"  class="col-lg-8"></div></div>
+            <div class="infoSpace row "><div class="infoHeads col-lg-3">Date Assigned</div><div class="col-lg-1">:</div><div id="assigned"  class="col-lg-8"></div></div>
+            </div>
+            <br>
+
+            <div class="infoSpace row"><div class="infoHeads col-lg-3">Issue Details</div></div>
+            <div class="infoSpace row" id="body" style="margin-left:0px;"><div class="col-lg-12">
+                <br><br><br>
+            </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <form id="issueStatus">
+                <div class='card complete' id="card">
+                    <div class='card-body'>
+                        <!-- for users info -->
+                        <div id="userInfo">
+                            <h5 class='card-title'>More User Info</h5>
+                            <h6 class='card-subtitle mb-2 text-muted'>More Info Regarding Tasks He/She has performed</h6>
+                            <p>User Details.</p>
+                            <button class="btn btn-sm btn-outline-dark" id="countdown" disabled> <span class="pending_info"></span> Pending Tasks  •  <span class="resolved_info"></span> Resolved Tasks •  <span class="closed_info"></span> Closed Tasks</button>
+                            <br>
+                            <br>
+                            <span class="btn btn-sm btn-dark" id="countdown">More Details</span>
+                            <!-- <div><button class="btn btn-sm btn-outline-info" id="escalated" onclick="getEscalatioInfo()">Escalated By Mark Miller</button></div> -->
+                        </div>
+                        <!-- for amdmins info -->
+                        <div id='notAdminBody'>
+                            <h5 class='card-title'>Issue Status</h5>
+                            <h6 class='card-subtitle mb-2 text-muted'>Take Actions Towards The Issue.</h6>
+                            <div class="terms">
+                                <b>You Can Either <i>Resolve</i> The Issue Or <i>Escalate </i>It.</b>
+                                <p></p><p></p>
+                                <ul>
+                                    <li>When Escaleted The User Will Be Emailed With A Link to Which He/She Can Close It.</li>
+                                    <li>When Escaled It Will be Reverted Beck to The Admin.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12  buttons">
+                        <span  class='btn btn-sm btn-danger col-lg-5' id ='escalete' onclick="manageIssue(this)">Escalate</span>
+                        <span  class='btn btn-sm btn-success col-lg-6' id ='resolve' onclick="manageIssue(this)">Resolve</span>
+                    </div>
+                    <p></p>
+                </div>
+
+                
+                <!-- attachments -->
+                <div class="attachments" id="attachments">
+                    <h5 class="section mt-4">Attachments</h5>
+                <hr>     
+                </div>
+
+                <!-- foward issue to another person -->
+                <form id="issueHandle mt-5">
+                    <div class='card mt-5'>
+                    <div class='card-body'>
+                        <h5 class='card-title'>Manage Issue</h5>
+                        <h6 class='card-subtitle mb-2 text-muted'>Take Actions Towards The Issue.</h6>
+                        <button class="btn btn-sm btn-outline-primary" id="countdown" disabled>20 Pending Tasks </button>
+                        <p></p>
+                        <div class="form-group">
+                                <label for="employee">Assign Task To :</label>
+                                <select class="form-control form-control-sm" id="employee" name="employee" onchange="getUserIssues(this);">
+                                  <option selected value="null">Select User</option>
+                                </select>
+                        </div>
+                        <p></p>
+                        <br>
+                        <div class="">
+                            <span class='card-link btn btn-sm btn-info btn-block' id ='reassignIssue' name="assign">Reassign Issue</span>
+                        </div>
+                    </div>
+                   </div>
+                   <div class="attachments" id="attachments">
+                        <h5 class="section mt-4">Attachments</h5><hr>
+                   </div>
+                </form>s
+
+
+
+
+            </form>
+            <br>
+        </div>
+    </div>
+</div>

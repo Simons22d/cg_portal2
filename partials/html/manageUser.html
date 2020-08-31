@@ -1,0 +1,73 @@
+<style>
+    .infoHeads{
+        color: #999;
+        font-weight : bold;
+    }
+    .infoSpace {
+        margin-top:7px;
+    }
+    .text-muted{
+        color : #aaa;
+    }
+    .desc{
+        font-size : 14px;
+    }
+    #body{
+        margin-left : -16px;
+    }
+    .page{
+        margin-left:-16px;
+    }
+    /*.btn-light{*/
+    /*    border : 4px solid #eee;*/
+    /*    border-radius: 10px;*/
+    /*}*/
+    .terms{
+        color : #777;
+    }
+    .buttons{
+        margin-left:20px;
+    }
+</style>
+<div class="page">
+    <div class="row col-lg-12">
+        <div class="col-lg-7">
+            <h5>User Details</h5>            
+            <p><br></p>
+            <div id="issueInfo">
+            <div class="infoSpace row"><div class="infoHeads col-lg-3">Names</div><div class="col-lg-1">:</div><div id="names"  class="col-lg-8"></div></div>
+            <div class="infoSpace row"><div class="infoHeads col-lg-3">Tasks Tasks</div><div class="col-lg-1">:</div><div id="tasks"  class="col-lg-8"></div></div>
+            <br>
+            <button class="btn btn-sm btn-outline-dark" id="countdown" disabled>20 Pending Tasks  •  5 Resolved Tasks •  4 Closed Tasks</button>
+            </div>
+            <br>
+        </div>
+        <div class="col-lg-5">
+            <form id="issueStatus">
+                <div class='card complete' id="card">
+                    <div class='card-body'>
+                        <!-- for users info -->
+                        <div id="userInfo">
+                            <h5 class='card-title'>Add User To Department.</h5>
+                            <h6 class='card-subtitle mb-2 text-muted'>Adding A User To A Field That He Is Proficient</h6>
+                            <div class="form-group">
+                                <label for="Department :">Department :<small  class="help_info form-text text-muted">Specify The Issue Category.</small></label>
+                                <select class="form-control" id="department"  name="department" onchange="setDept(this);">
+                                  <option value="null" selected>Select The Department</option>
+                                </select>
+                            </div>      
+                            <br>
+                            <span class="btn btn-success btn-block" id="addUserDept" onclick="addUserDept(this)">Add User To Department.</span>
+                            <br>
+                            <h5 class='card-title'>Manage User Account.</h5>
+                            <p class='card-subtitle mb-2 text-muted'>Here you can Change the: User Type, Password, Email etc.</p> <br>
+                            <span class="btn btn-warning btn-block" id="addUserDept" onclick="manageUserInfo(this)">Manage User.</span>
+                        </div>
+                    </div>
+                    <p></p>
+                </div>
+            </form>
+            <br>
+        </div>
+    </div>
+</div>

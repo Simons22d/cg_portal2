@@ -1,0 +1,16 @@
+// issues 
+-- cannot seem to add issues 
+-- reassignment brings two issues [assignment]
+-- search endpoint does not seem to work
+
+## endpoint that are needed  ... 
+-- weekly reports [all,new,assigned,resolved,escalated]
+-- monthly report [all,new,assigned,resolved,escalated]
+-- daily graph that shows the daily new,resolved,assigned,escalated and closed requests
+
+
+#endpoint that naed to be updated 
+ -- "get_single_issue" to include comments on [diagnosis,resolution,recommendation]
+
+
+

@@ -1,0 +1,533 @@
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+.offset-by-150{
+	margin-top: 100px;
+}
+.center{
+    margin : 0 auto;
+}
+html {
+    height: 100%;
+    font-family: 'Muli';
+}
+
+.navbar{
+    height:80px;
+    box-shadow: 0px -10px 34px 6px rgba(189, 189, 189, 1);
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+#container {
+    height: 100%;
+}
+
+#sidebar {
+    padding : 30px 10px 0px 5px;
+    display: inline-block;
+    height: 100%;
+    width: 18%;
+    overflow: auto;
+}
+
+#content {
+    background-color: #f8f8f8;
+    display:inline-block;
+    height: 100%;
+    padding-left: 30px;
+    width: 82%;
+    overflow: auto;
+}
+.name {
+    text-align : center;
+}
+
+
+        /* new style */
+    /*div { margin: 20px; }*/
+
+    .styled-select {
+    /*height: 29px;*/
+    overflow: hidden;
+    width: 240px;
+    }
+
+    .styled-select select {
+    background: transparent;
+    border: none;
+    font-size: 12px;
+    /*height: 29px;*/
+    padding: 5px; /* If you add too much padding here, the options won't show in IE */
+    width: 268px;
+    }
+
+    .styled-select.slate {
+    background: url(../dist/css/arrow.png) no-repeat right center;
+    width: 100px;
+    }
+
+    .styled-select.slate select {
+    font-size: 14px;
+    height: 34px;
+    width: 114px;
+
+    }
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+    outline: none;
+    }
+    /*styling the drops position*/
+    .slate {
+        margin-left:15px;
+    }
+    .header {
+            font-size : 14px;
+            color :#afafaf;
+     }
+     .sidebar_items{
+            margin-left : 20px  ;
+     }
+     /*styling the bottom sidebar item for logout*/
+     .logout{
+        font-family:"keep calm";
+        margin-left:-8px;
+        padding-top:20px ;
+        padding-bottom: 10px;
+     }
+
+     .bar_name{
+        font-size:16px;
+        color:#999;
+     }
+     .logout_sidebar{
+        background-color : #fede22;
+        padding-left:-7px;
+     }
+     .log_sub{
+        font-size:12px;
+     }
+     .log_main{
+        color :#bababa;
+     }
+     #space{
+        margin-top : 20px;
+     }
+     /*style for the list of items*/
+
+     .items{
+        font-size:14px;
+        color:#6b6b6b;
+     }
+     /*styling the icons : sidebar*/
+     .icon{
+        margin-top:-5px;
+        padding-right : 15px;
+     }
+     /*styling the sidebar items and buttons*/
+     .item{
+        cursor :pointer;
+     }
+     .item:hover{
+        color:#6970ff;
+     }
+     /*or the add icon*/
+     .plus{
+        height : 10px;
+     }
+     option:hover{
+        color:#6970ff;
+     }
+
+     #theDisplay{
+        font-family:"keep Calm";
+        color:#686970;
+     }
+
+    .clicked{
+        color : #6970ff ;
+    }
+
+    #error{
+        color : #ff0000;
+    }
+    #this_form {
+        font-size : 14px;
+    }
+    #days{
+        color: #696969;
+    }
+    #logo{
+        height : 50px;
+        padding : 0px 0px 0px 20px;
+        margin : 0px 0px 40px 0px;
+    }
+    li{
+        list-style-type: none;
+        margin-left : -5px;
+        padding-top:4px;
+    }
+    li:hover {
+        padding-left:1px;
+        color:#6354e7;
+    }
+    #dropdown{
+        margin-top:-7px;
+        font-size:13px;
+        
+        margin-left :-8px;
+        cursor:pointer
+    }   
+    #allDeptLabel{
+        font-size : 12px;
+    }
+    #switch{
+        margin-left:20px;
+    }
+    #allDeptsLabel{
+        margin-left:20px;
+    }
+
+     /* The Modal (background) */
+    .modal {
+        font-family : "Muli";
+        display: none; /* Hidden by default */
+        position: fixed;
+        font-size:14px;
+        z-index: 2; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        overflow: auto; 
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(133, 130, 130, 0.9); /* Black w/ opacity */
+    }
+    .popup {
+        font-family : "Muli";
+        height:100%;
+        display: none; /* Hidden by default */
+        position: fixed;
+        font-size:14px;
+        z-index: 10; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        overflow: auto; /*Enable scroll if needed*/
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(133, 130, 130, 0.9); /* Black w/ opacity */
+    }
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        font-size:12px;
+        margin: 6% auto; /* 15% from the top and centered */
+        padding: 30px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+        padding-bottom:3%;
+        border-radius:15px;
+    }
+    .modal-content >.modal-info{
+        font-size:12px;
+    }
+    
+    .modal-content_popup {
+        background-color: #fefefe;
+        margin: 6% auto; /* 15% from the top and centered */
+        font-size:12px;
+        padding: 30px;
+        border: 1px solid #888;
+        width: 70%; /* Could be more or less, depending on screen size */
+        padding-bottom:3%;
+        border-radius:15px;
+    }
+    
+    /* The Close Button */
+    .close {
+        float: right;
+        color: #999;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .close_pop{
+        color: #aaa;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left:95%;
+    }
+    .close_pop:hover,
+    .close_pop:focus {
+        color: black;
+        cursor: pointer;
+        text-decoration: none;
+    }
+       
+    #pop{
+        padding-left:50px;
+        padding-right:50px;
+    }
+    .actions{
+        color : lightseagreen;
+        margin-bottom:-2px;
+    }
+    .modalInfo{
+        font-size:12px;
+        font-weight:500;
+    }
+    .btn-light{
+        background-color: #d4e7f6;
+    }
+
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+.offset-by-150{
+    margin-top: 100px;
+}
+.center{
+    margin : 0 auto;
+}
+.navbar{
+    height:80px;
+    box-shadow: 0px -10px 34px 6px rgba(189, 189, 189, 1);
+}
+#container {
+    height: 100%;
+}
+
+#sidebar {
+    padding : 30px 10px 0px 5px;
+    display: inline-block;
+    font-family: 'Muli', sans-serif;
+    height: 100%;
+    width: 18%;
+    overflow: auto;
+}
+
+#content {
+    background-color:#fcfcfc;
+    display:inline-block;
+    height: 100%;
+    padding-left: 30px;
+    width: 82%;
+    overflow: auto;
+}
+.name {
+    text-align : center;
+}
+
+
+/* new style */
+/*div { margin: 20px; }*/
+
+.styled-select {
+    /*height: 29px;*/
+    overflow: hidden;
+    width: 240px;
+}
+
+.styled-select select {
+    background: transparent;
+    border: none;
+    font-size: 12px;
+    padding: 5px; /* If you add too much padding here, the options won't show in IE */
+    width: 268px;
+}
+
+.styled-select.slate {
+    background: url(../dist/css/arrow.png) no-repeat right center;
+    width: 100px;
+}
+
+.styled-select.slate select {
+    font-size: 14px;
+    height: 34px;
+    width: 114px;
+
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/*styling the drops position*/
+.slate {
+    margin-left:15px;
+}
+.sidebar_items{
+    margin-left : 20px;
+}
+/*styling the bottom sidebar item for logout*/
+.bar_name{
+    font-size:16px;
+    color:#999;
+}
+.logout_sidebar{
+    padding-left:-7px;
+}
+.log_sub{
+    font-size:12px;
+}
+.log_main{
+    color :#bababa;
+}
+#space{
+    margin-top : 20px;
+}
+/*styling the icons : sidebar*/
+.icon{
+    margin-top:-1px;
+    padding-right : 15px;
+    height : 17px
+}
+/*styling the sidebar items and buttons*/
+.item{
+    cursor :pointer;
+}
+/* .item:hover{
+color:#6970ff;
+} */
+/*or the add icon*/
+.plus{
+    height : 10px;
+}
+option:hover{
+    color:#6970ff;
+}
+
+#theDisplay{
+    font-family:"Montserrat";
+    font-weight:600;
+    color:#686970;
+}
+
+
+#error{
+    color : #ff0000;
+}
+#this_form {
+    font-size : 14px;
+}
+#days{
+    color: #696969;
+}
+#logo{
+    height : 60px;
+    padding : 0px 0px 0px 20px;
+    margin : 0px 0px 40px 0px;
+}
+
+.nochild{
+    color : #232323;
+}
+.option{
+    font-size: 14px;
+}
+
+.option:hover{
+    cursor  : pointer;
+}
+
+.summary{
+    padding-top : 20px;
+}
+
+#display{
+    font-size : 12px;
+    font-family: "Muli"
+}
+.card{
+    font-family: "Muli"
+}
+#section{
+    font-family : "Muli"
+}
+
+.attachment{
+    padding-top:10px;
+}
+.attachment_count{
+    margin-bottom:20px
+}
+#graphs{
+    border:4px solid #ededed;
+    border-radius:20px ;
+    padding :15px;
+    height : 300px;
+}
+#graphs:hover{
+    border:4px solid #e7e7c7;
+}
+#loggedEmail{
+    height: 32px;
+    border-radius : 5px;
+    border:3px solid #dedede;
+    font-size:12px;
+}
+#loggedEmail:hover{
+    background-color: #dedede;
+    color:#444;
+}
+
+#flag {
+    height : 20px;
+}
+
+#theDisplay{
+    font-family:'Muli'
+}
+.custom-btn{
+    padding : 7px 10px;
+    font-size:11px;
+}
+.modal-btn{
+    cursor: pointer;
+}
+#beta{
+    font-size:10px;
+    background-color: #09f;
+    color : #fff;
+    padding : 2px 5px;
+    border-radius :5px;
+}
+.asset{
+    cursor: pointer;
+}
+.clicked{
+    color : #09f ;
+}
+.btn-font{
+    font-size:10px;
+}
+.subNav{
+    color : #09f;
+    cursor : pointer;
+}
+#toSupport{
+    font-size:12px;
+    border:3px solid #bbb;
+    font-weight: 900;
+    color:#aaa;
+    border-radius:10px;
+    padding:3px 10px;
+}
+.btn { 
+    font-family : "Muli"
+}

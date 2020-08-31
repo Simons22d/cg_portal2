@@ -1,0 +1,26 @@
+.nochild{
+    color : light-blue;
+    cursor : pointer;
+    margin : 7px 20px;
+}
+
+.link{
+    color: #999;
+}
+.link:hover{
+    color : #09f;
+}
+
+.clicked{
+    color : #09f ;
+}
+
+#section{
+    color : #888;
+}
+#sidebar{
+    background-color: #fff;
+}
+.hovered{
+    color : #09f ;
+}

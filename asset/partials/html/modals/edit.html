@@ -1,0 +1,104 @@
+<form id='pop_addItem' class="mb-5">
+    <div class='row'>
+        <div class='col-lg-6'>
+            <!-- <div class='form-group'>
+                <label for='username'>Assign User</label>
+                <input required class='form-control form-control-sm' list="staffNumberList" name='staff_number'
+                    id='staffNumber' aria-placeholder="Enter User Staff number Eg. 20" oninput="getStaffNumber(this)">
+                <datalist id="staffNumberList">
+                </datalist>
+            </div> -->
+            <div class='form-group'>
+                <label for='price'>Price</label>
+                <div class='input-group'>
+                    <input required type='text' name='price' class='form-control form-control-sm' id='pop_price' placeholder=''>
+                </div>
+            </div>
+
+            <div class='form-group'>
+                <label for='manufacturer'>Manufacturer</label>
+                <div class='input-group'>
+                    <input required type='text' name='manufacturer' class='form-control form-control-sm' id='pop_manufacturer' placeholder='eg. Sony Samsung'>
+                </div>
+            </div>
+<!--part n-->
+            <div class='form-group'>
+                <label for='partNumber'>Part Number</label>
+                <div class='input-group'>
+                    <input required type='text' name='part_number' class='form-control form-control-sm' id='pop_part_number' placeholder=''>
+                </div>
+            </div>
+            <span>Warranty</span>
+            <div class='row'>
+                <div class='form-group col-lg-6'>
+                    <label for='years'>Years</label>
+                    <select required class='form-control form-control-sm' name='years' id='years'>
+                        <option value='Null'>Select Years</option>
+                        <option value='1'>One Year</option>
+                        <option value='2'>Two Years</option>
+                        <option value='3'>Three Years</option>
+                        <option value='4'>Four Years</option>
+                        <option value='5'>Five Years</option>
+                    </select>
+                </div>
+                <div class='form-group col-lg-6'>
+                    <label for='months'>Months</label>
+                    <select  required class='form-control form-control-sm' name='months' id='months'>
+                        <option value='Null'>Select months</option>
+                        <option value='3'>Three months</option>
+                        <option value='6'>Six months</option>
+                        <option value='9'>Nine months</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!--page division-->
+        <div class='col-lg-6'>
+            <!--      start-->
+            <div class='form-group'>
+                <label for='location'>Location</label>
+                <select required class='form-control form-control-sm' name='location' id='pop_location'>
+                    <option value='Null'>Select Location</option>
+                </select>
+            </div>
+            <!--      end-->
+            <div class='form-group'>
+                <label for='category'>Category</label>
+                <select  required class='form-control form-control-sm' name='category' id='pop_category'>
+                    <option value='Null'>Select Category</option>
+                </select>
+            </div>
+
+            <!-- category section for specs -->
+            <div class='form-group'>
+                <label for='Model'>Model</label>
+                <input required type='text' class='form-control form-control-sm' name='Model' id='pop_model' placeHolder="HP G250">
+            </div>
+
+            <div class='form-group'>
+                <label for='dop'>Date Of Purchase</label>
+                <input required type='text' class='form-control form-control-sm' name='dop' id='pop_dop' placeholder='' readonly>
+            </div>
+
+
+            <div class='form-group'>
+                <label for='supplier'>Supplier</label>
+                <input required type='email' class='form-control form-control-sm' name='supplier' id='pop_supplier' placeholder='Enter Item supplier'>
+            </div>
+
+            <div class='form-group'>
+                <label for='serialnumber'>Serial Number</label>
+                <div class='input-group'>
+                    <input required type='text' name='serialnumber' class='form-control form-control-sm' id='pop_serialnumber' placeholder=''>
+                </div>
+            </div>
+        </div>
+    </div>
+     <button type='button' id='pop_submitAddItem' class='col-lg-4 offset-lg-3 btn btn-primary btn-block mt-5' onclick="editItemData()">Submit</button>
+</form>
+<!--updating the DOM-->
+<script>
+    picker("pop_warrantyExpires")
+    picker("pop_dop")
+</script>
